@@ -92,7 +92,7 @@ const Stage1 = ({
         setLoading(true);
 
         axios
-          .post("https://onemgmasa.herokuapp.com/user/checkmobile", { mobile: userNumber })
+          .post("https://tata-1mg-t.vercel.app/user/checkmobile", { mobile: userNumber })
           .then((res) => {
             if (res.data.status != true) {
               setMessage(res.data.message);

@@ -23,7 +23,7 @@ const userLoginError = (payload) => {
 const userLoginAPI = (payload) => (dispatch) => {
   dispatch(userLoginLoading(payload));
   axios
-    .post(`https://onemgmasa.herokuapp.com/user/login`, payload, {
+    .post(`https://tata-1mg-t.vercel.app/user/login`, payload, {
       headers: {
         Authorization: "Bearer " + payload.token,
       },
@@ -63,7 +63,7 @@ const userSignupAPI = (payload) => (dispatch) => {
   dispatch(userSignupLoading(payload));
   console.log(payload)
   axios
-    .post(`https://onemgmasa.herokuapp.com/user/signup`, payload, {
+    .post(`https://tata-1mg-t.vercel.app/user/signup`, payload, {
       headers: {
         Authorization: "Bearer " + payload.token,
       },
@@ -104,7 +104,7 @@ const userLogoutAPI = (payload) => (dispatch) => {
   
   dispatch(userLogoutLoading(payload));
   axios
-    .post(`https://onemgmasa.herokuapp.com/user/logout/${payload}`)
+    .post(`https://tata-1mg-t.vercel.app/user/logout/${payload}`)
     .then((r) => dispatch(userLogoutSuccess(r.data)))
     .catch((e) => dispatch(userLogoutError(e.data)));
 };
@@ -133,7 +133,7 @@ const userGetProfileAPI = (payload) => (dispatch) => {
   dispatch(userGetProfileLoading(payload));
  
   axios
-    .get(`https://onemgmasa.herokuapp.com/user/profile/${payload.userId}`, {
+    .get(`https://tata-1mg-t.vercel.app/user/profile/${payload.userId}`, {
       headers: {
         Authorization: "Bearer " + payload.token,
       },
