@@ -110,7 +110,7 @@ const MobileSearchBox = () => {
   };
   const fetchResult = (query) => {
     axios
-      .get(`https://onemgmasa.herokuapp.com/products/search?q=${query}`)
+      .get(`https://tata-1mg-t.vercel.app/products/search?q=${query}`)
       .then((r) => {
        
 
